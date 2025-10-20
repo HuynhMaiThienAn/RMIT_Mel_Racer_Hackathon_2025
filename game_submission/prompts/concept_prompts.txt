@@ -1,0 +1,18 @@
+Perplexity
+Assume that you are 3 people (uni student, office worker and normal people at home), can you list out possible cyber threats that may occure at school, office and home. Cyber problems should within Australia and give research evidences related to it
+
+Chat gpt
+i want to change the game so that it is a board game, roll dice to move and the map will looks like a user is going around the internet. there will be empty square, action square (where a scenario card will be presented and player must choose an action option for that scenario). The user goal is to reach the end. The scenario should get harder as the game goes on. If player answer wrong, they  will get send back 3 square and lose a life. If sucessful, roll the dice. There will be a game master who will read out the card. 
+
+
+
+
+
+
+
+
+
+
+
+
+

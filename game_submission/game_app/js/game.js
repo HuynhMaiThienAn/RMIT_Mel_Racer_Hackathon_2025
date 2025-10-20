@@ -15,6 +15,29 @@ let activeEffects = [];
 let correctStreak = 0;
 let wrongStreak = 0;
 
+// Audio effects (optional - won't break if files missing)
+const sounds = {
+    diceRoll: new Audio('./audio/dice-roll.mp3'),
+    correctAnswer: new Audio('./audio/correct-answer.mp3'),
+    wrongAnswer: new Audio('./audio/wrong-answer.mp3'),
+    victory: new Audio('./audio/victory.mp3'),
+    gameOver: new Audio('./audio/game-over.mp3')
+};
+
+// Function to play sounds safely
+function playSound(soundKey, volume = 0.5) {
+    try {
+        const audio = sounds[soundKey];
+        if (audio && audio.src) {
+            audio.currentTime = 0;
+            audio.volume = volume;
+            audio.play().catch(() => {}); // Silent fail if audio unavailable
+        }
+    } catch (error) {
+        // Silent fail - don't break game if audio fails
+    }
+}
+
 // Square type constants
 const SQUARE_TYPES = {
     EMPTY: 'empty',
@@ -172,12 +195,10 @@ function generateBoard() {
             } else if (specialCount < targetCounts.special) {
                 // Randomly choose which special tile type
                 const rand = Math.random();
-                if (rand < 0.33) {
+                if (rand < 0.5) {
                     type = SQUARE_TYPES.FORWARD;
-                } else if (rand < 0.66) {
+                } else if (rand < 1.0) {
                     type = SQUARE_TYPES.BACKWARD;
-                } else {
-                    type = SQUARE_TYPES.POWERUP;
                 }
                 specialCount++;
             } else if (emptyCount < targetCounts.empty) {
@@ -193,7 +214,7 @@ function generateBoard() {
                     actionIndices.add(idx);
                 } else if (type !== SQUARE_TYPES.EMPTY) {
                     // Add values for special tiles
-                    board[idx].value = Math.floor(Math.random() * 3) + 1;
+                    board[idx].value = Math.floor(Math.random() * 2) + 1;
                 }
             }
         }
@@ -317,6 +338,8 @@ function rollDice() {
         return;
     }
     
+    playSound('diceRoll', 0.6);
+    
     animating = true;
     const diceBtn = document.getElementById("dice-btn");
     if (diceBtn) diceBtn.disabled = true;
@@ -377,6 +400,8 @@ function movePlayer(steps) {
     function step() {
         if (currentStep < steps && position < boardSize - 1) {
             position++;
+            score += 1; // +1 for each tile moved forward
+            updateScoreUI();
             updateBoardPosition();
             currentStep++;
             
@@ -461,11 +486,6 @@ function handlePowerup(type) {
             activeEffects.push("protection");
             displayMessage("system", "🛡️✨ SHIELD ACTIVATED! You're protected from the next wrong answer.");
             break;
-            
-        case 3:
-            activeEffects.push("extraRoll");
-            displayMessage("system", "🎲⚡ BONUS ROLL! You'll roll again after this turn.");
-            break;
     }
     
     animating = false;
@@ -482,6 +502,9 @@ function moveBackward(steps) {
     function step() {
         if (stepsLeft > 0 && position > 0) {
             position--;
+            score -= 1; // -1 for each tile moved backward
+            score = Math.max(0, score); // Don't let score go negative
+            updateScoreUI();
             updateBoardPosition();
             stepsLeft--;
             setTimeout(step, 200);
@@ -542,7 +565,7 @@ function presentCard() {
     }
 }
 
-// Handle choice - ENHANCED: Streak tracking and multipliers
+// Handle choice - ENHANCED: New scoring system
 function handleChoice(option) {
     if (!awaitingAction) return;
     
@@ -551,10 +574,13 @@ function handleChoice(option) {
         ((option.points || 0) > 0);
     
     if (isCorrect) {
+        playSound('correctAnswer', 0.7);
         correctStreak++;
         wrongStreak = 0;
         
-        let points = option.points || 1;
+        // NEW SCORING: points = difficulty (stars) × 2
+        const difficulty = currentCard.difficulty || 1;
+        let points = difficulty * 2;
         
         // Streak bonus: +25% per correct answer in a row (max 3 streak for 50% bonus)
         if (correctStreak > 1) {
@@ -568,8 +594,11 @@ function handleChoice(option) {
         // Display streak message
         if (correctStreak > 1) {
             displayMessage("system", `🔥 Streak x${correctStreak}! Earned ${points} points!`);
+        } else {
+            displayMessage("system", `✅ Correct! Earned ${points} points!`);
         }
     } else {
+        playSound('wrongAnswer', 0.7);
         wrongStreak++;
         correctStreak = 0;
         
@@ -750,12 +779,16 @@ function displayMessage(sender, text) {
 
 // End game - Victory with popup
 function endGameWin() {
+    const winBonus = 10; // +10 for winning
     const streakBonus = Math.max(0, Math.min(correctStreak - 1, 2) * 10);
-    const finalScore = score + streakBonus;
+    const finalScore = score + winBonus + streakBonus;
     
     displayMessage("system", "🎉 VICTORY! You navigated the internet safely!");
-    displayMessage("system", `🏆 Final Score: ${finalScore} (Base: ${score}${streakBonus > 0 ? ` + Streak Bonus: ${streakBonus}` : ''})`);
+    displayMessage("system", `🏆 Final Score: ${finalScore} (Base: ${score} + Win Bonus: ${winBonus}${streakBonus > 0 ? ` + Streak Bonus: ${streakBonus}` : ''})`);
     displayMessage("system", `✅ Correct Streak: x${correctStreak} | ❌ Times at Risk: ${wrongStreak}`);
+    
+    // Play victory sound
+    playSound('victory');
     
     // Create victory popup
     showVictoryPopup(finalScore, correctStreak, wrongStreak);
@@ -779,6 +812,9 @@ function endGameWin() {
 function endGameLose() {
     displayMessage("system", "💀 GAME OVER! You ran out of lives.");
     displayMessage("system", `📊 Final Score: ${score} | 🔥 Best Streak: x${correctStreak} | ⚠️ Risky Moments: ${wrongStreak}`);
+    
+    // Play game over sound
+    playSound('gameOver');
     
     // Create game over popup
     showGameOverPopup(score, correctStreak, wrongStreak);

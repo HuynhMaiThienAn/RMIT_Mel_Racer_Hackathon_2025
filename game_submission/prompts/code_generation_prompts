@@ -1,0 +1,29 @@
+i want the whole UI to be a 10x10 board and the character move on it. User dont have to choose a scenario but played and get random scenario. also change the css. The user first role the dice, then move on the board. If meet obstacle, the dialog appear and uses has to answer by choosing the right action (scenario could be both good and bad)
+
+dont need a game master, the card should be a seperate card, dice animation should be on a side and dont have to click play to start in the game page. also add footer, header
+
+i want the option dont have indicator right or wrong, also add a twist to the game
+
+i want the feedback for answering right or wrong within the card, also, add more square (powerup, move forward, backward, sth like the snake and ladder game).
+
+fix the bug where i cant roll the dice, also special tiles should be generate random (with no same special tile next to each other)
+
+now wrong answer only remove live (add animation for that). Also i dont see any special tile
+
+now wrong answer only remove live (add animation for that). Also i dont see any special tile
+
+each row should have only 1 special tile (either powerup, move forward or backward), 4 action tiles and 5 empty square. all tile should display number
+
+add message as pop up when victory or lose. also add animation for the moving character and when the card pop up
+
+add the restart game button and update the index page so that there are 2 option: play and learn. with learn, show all the card in the game
+
+add more scenario, for the data file, only have 3 file for each category. User can sort by category or difficulty. Each category should have 20 scenario 
+
+the correct answer in the game should be at random order. For learn more, it should be the first option
+
+modify the index so that it has another page for about us
+
+remove the reset game button at the bottom right of the screen, also remove this Challenge 3 — Vibe Coding: Play to Impact
+
+year is 2025
