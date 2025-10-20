@@ -20,16 +20,16 @@
 <body class="board-bg min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-gray-900 bg-opacity-80 py-3 px-6 flex justify-between items-center border-b border-gray-800">
-        <div class="flex items-center">
+        <a href="index.html" class="flex items-center hover:opacity-80 transition">
             <h1 class="text-xl font-bold text-cyan-400">CyberSafe</h1>
-            <span class="mx-2 text-gray-600">|</span>
-            <span class="text-sm text-gray-400">Navigate the Internet</span>
-        </div>
+        </a>
         <div class="flex items-center space-x-4">
-            <button id="restart-btn" class="text-sm bg-yellow-600 hover:bg-yellow-700 px-3 py-1 rounded text-white font-semibold transition">
+            <button id="restart-btn" class="text-sm bg-yellow-600 hover:bg-yellow-700 px-3 py-1 rounded text-white font-semibold transition duration-300 transform hover:scale-105">
                 🔄 Restart
             </button>
-            <a href="index.html" class="text-gray-400 hover:text-white text-sm">Home</a>
+            <a href="index.html" class="text-sm bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 px-3 py-1 rounded text-white font-semibold transition duration-300 transform hover:scale-105">
+                🏠 Home
+            </a>
         </div>
     </header>
 
@@ -160,7 +160,8 @@
     <!-- Footer -->
     <footer class="bg-gray-900 bg-opacity-80 py-3 px-6 text-center text-gray-500 text-sm border-t border-gray-800">
         <p>CyberSafe Game - Teaching online safety through Australian cyber scenarios</p>
-        <p>Created for Challenge 3 — Vibe Coding: Play to Impact</p>
+        <p>RMIT Hackathon 2025 | GenAI & Cyber Security | Team Racer</p>
+        <p class="text-sm mt-4">© 2025 Team Racer. All rights reserved.</p>
     </footer>
 
     <script>

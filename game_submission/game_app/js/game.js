@@ -28,9 +28,6 @@ const SQUARE_TYPES = {
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Game initializing...");
     
-    // Add emergency reset button
-    addResetButton();
-    
     // Set up dice button
     const diceBtn = document.getElementById("dice-btn");
     if (diceBtn) {
@@ -49,35 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start game after a slight delay
     setTimeout(initGame, 500);
 });
-
-// Emergency reset button
-function addResetButton() {
-    const resetBtn = document.createElement('button');
-    resetBtn.textContent = "🔄 Reset Game";
-    resetBtn.className = "fixed bottom-2 right-2 bg-red-800 text-white text-xs px-2 py-1 rounded z-50 opacity-70 hover:opacity-100";
-    resetBtn.onclick = () => {
-        console.log("Emergency reset triggered");
-        awaitingAction = false;
-        animating = false;
-        
-        const diceBtn = document.getElementById("dice-btn");
-        if (diceBtn) diceBtn.disabled = false;
-        
-        const scenarioCard = document.getElementById("scenario-card");
-        const instructions = document.getElementById("instructions");
-        if (scenarioCard) scenarioCard.classList.add("hidden");
-        if (instructions) instructions.classList.remove("hidden");
-        
-        const diceDisplay = document.getElementById("dice-display");
-        if (diceDisplay) {
-            diceDisplay.classList.remove("animate-spin");
-            diceDisplay.textContent = "🎲";
-        }
-        
-        alert("Game state reset! You can roll the dice again.");
-    };
-    document.body.appendChild(resetBtn);
-}
 
 // Initialize game
 async function initGame() {
@@ -798,11 +766,11 @@ function endGameWin() {
             <div style="text-align: center; margin-bottom: 10px;">
                 <p style="font-size: 12px; color: #9ca3af;">You survived the digital jungle!</p>
             </div>
-            <button onclick="location.reload()" class="bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg text-white font-semibold w-full mb-2">
-                Play Again
+            <button onclick="location.reload()" class="bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg text-white font-semibold w-full mb-2 transition duration-300 transform hover:scale-105">
+                🔄 Play Again
             </button>
-            <a href="index.html" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg text-white font-semibold block text-center">
-                Return Home
+            <a href="index.html" class="inline-block bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 px-4 py-2 rounded-lg text-white font-semibold text-center w-full transition duration-300 transform hover:scale-105">
+                🏠 Return Home
             </a>
         `;
     }
@@ -821,11 +789,11 @@ function endGameLose() {
             <div style="text-align: center; margin-bottom: 10px;">
                 <p style="font-size: 12px; color: #9ca3af;">The digital world got the best of you. Try again!</p>
             </div>
-            <button onclick="location.reload()" class="bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg text-white font-semibold w-full mb-2">
-                Try Again
+            <button onclick="location.reload()" class="bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg text-white font-semibold w-full mb-2 transition duration-300 transform hover:scale-105">
+                🔄 Try Again
             </button>
-            <a href="index.html" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg text-white font-semibold block text-center">
-                Return Home
+            <a href="index.html" class="inline-block bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 px-4 py-2 rounded-lg text-white font-semibold text-center w-full transition duration-300 transform hover:scale-105">
+                🏠 Return Home
             </a>
         `;
     }

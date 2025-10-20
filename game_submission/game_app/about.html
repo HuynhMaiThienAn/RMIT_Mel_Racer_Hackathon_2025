@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberSafe: About Us</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <style>
+        .card-animate {
+            transition: all 0.3s ease;
+        }
+        .card-animate:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Header -->
+    <header class="bg-gray-900 bg-opacity-80 py-3 px-6 border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center hover:opacity-80 transition">
+                <h1 class="text-2xl font-bold text-cyan-400">👥 About Us</h1>
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-sm bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 px-3 py-1 rounded text-white font-semibold transition duration-300 transform hover:scale-105">
+                    🏠 Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen py-16 px-4">
+        <div class="container mx-auto">
+            <!-- Hero Section -->
+            <div class="text-center mb-16 animate-fadeIn">
+                <h2 class="text-4xl font-bold text-cyan-400 mb-4">About CyberSafe</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+                    A collaborative project dedicated to making cyber security education engaging, accessible, and impactful for all Australians.
+                </p>
+           
+
+            <!-- Team Section -->
+            <section class="mb-16">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg mb-12">
+                    <h3 class="text-3xl font-bold text-cyan-300 mb-4 text-center">Team: Racer</h3>
+                    <p class="text-gray-300 text-center text-lg mb-6">
+                        We are a passionate group of developers and cyber security enthusiasts committed to making online safety education 
+                        engaging and practical for everyone.
+                    </p>
+                    <p class="text-gray-400 text-center">
+                        Our team combines expertise in game design, web development, and cyber security to create an innovative learning experience 
+                        that addresses real threats facing Australian communities.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Mission Section -->
+            <section class="mb-16">
+                <h3 class="text-3xl font-bold text-cyan-400 mb-8 text-center">Our Mission</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg card-animate">
+                        <div class="text-5xl mb-4 text-center">🎓</div>
+                        <h4 class="text-xl font-bold text-cyan-300 mb-4 text-center">Educate</h4>
+                        <p class="text-gray-300 text-center">
+                            Teach practical cyber security awareness through engaging gameplay and real-life Australian scenarios that resonate 
+                            with students, office workers, and families.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg card-animate">
+                        <div class="text-5xl mb-4 text-center">🛡️</div>
+                        <h4 class="text-xl font-bold text-cyan-300 mb-4 text-center">Protect</h4>
+                        <p class="text-gray-300 text-center">
+                            Empower users with the knowledge and skills to identify cyber threats and make informed decisions to stay safe in 
+                            their daily online activities.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg card-animate">
+                        <div class="text-5xl mb-4 text-center">🌍</div>
+                        <h4 class="text-xl font-bold text-cyan-300 mb-4 text-center">Impact</h4>
+                        <p class="text-gray-300 text-center">
+                            Build a safer digital Australia by reducing cyber incidents and promoting a culture of cyber security awareness 
+                            across communities.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Info Section -->
+            <section class="bg-gradient-to-r from-cyan-900 to-blue-900 p-12 rounded-xl shadow-lg mb-16">
+                <h3 class="text-3xl font-bold text-cyan-300 mb-8 text-center">Project Background</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-bold text-cyan-300 mb-4">Challenge 3: Vibe Coding - Play to Impact</h4>
+                        <p class="text-gray-200 mb-4">
+                            CyberSafe was created as our submission for Challenge 3 of Vibe Coding, which challenged us to combine game design 
+                            with meaningful real-world impact.
+                        </p>
+                        <p class="text-gray-200">
+                            We identified a critical gap in cyber security education and designed an engaging board game experience that makes 
+                            learning about digital safety fun and practical.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-cyan-300 mb-4">Focusing on Australian Threats</h4>
+                        <p class="text-gray-200 mb-4">
+                            Our content is based on real cyber threats facing Australians in three key environments: educational institutions, 
+                            office workplaces, and home networks.
+                        </p>
+                        <p class="text-gray-200">
+                            Drawing from the Australian Signals Directorate's 2024-25 Annual Cyber Threat Report, we created 60 realistic scenarios 
+                            that educate while entertaining.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack Section -->
+            <section>
+                <h3 class="text-3xl font-bold text-cyan-400 mb-8 text-center">Built With</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg text-center">
+                        <div class="text-4xl mb-3">🌐</div>
+                        <p class="font-semibold text-cyan-300">HTML5</p>
+                        <p class="text-gray-400 text-sm">Semantic markup</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center">
+                        <div class="text-4xl mb-3">🎨</div>
+                        <p class="font-semibold text-cyan-300">Tailwind CSS</p>
+                        <p class="text-gray-400 text-sm">Modern styling</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center">
+                        <div class="text-4xl mb-3">⚙️</div>
+                        <p class="font-semibold text-cyan-300">JavaScript</p>
+                        <p class="text-gray-400 text-sm">Game logic</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg text-center">
+                        <div class="text-4xl mb-3">📊</div>
+                        <p class="font-semibold text-cyan-300">JSON</p>
+                        <p class="text-gray-400 text-sm">Scenario data</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 text-center text-gray-400 border-t border-gray-700 mt-16">
+        <p>CyberSafe Game - Teaching online safety through Australian cyber scenarios</p>
+        <p>RMIT Hackathon 2025 | GenAI & Cyber Security | Team Racer</p>
+        <p class="text-sm mt-4">© 2025 Team Racer. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
