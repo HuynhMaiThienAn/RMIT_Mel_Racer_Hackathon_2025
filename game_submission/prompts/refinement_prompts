@@ -1,1 +1,15 @@
 i want the ui to be interactive, animation and morden. The web will display the game information first, then user can click start. After click start, it should route to other page.
+
+can you also change the data too
+
+fix the bug where i cant roll the dice, also special tiles should be generate random (with no same special tile next to each other)
+
+the card content is missing, it only display the option
+
+first and last row should also have special tile (it's empty) and also add empty tile (at least 2) for each row
+
+make the learn page separate
+
+improve the button for go back home, change on the header too
+
+dont need to add the board on the review

@@ -1,18 +1,5 @@
-Perplexity
 Assume that you are 3 people (uni student, office worker and normal people at home), can you list out possible cyber threats that may occure at school, office and home. Cyber problems should within Australia and give research evidences related to it
 
-Chat gpt
+i want to make a single player game that player has to choose a solution based on the current scenario. player can played as 1 of 3 character (student uni, office worker and people who stay at home). for each player, they will talk to a stranger online and the stranger will try to trick the player to expose to the cyber threat. Player will choose the dialog (as card) and reply to the stranger (stranger will act as a familiar people). I want you to first give the structure of the game (folders, files).
+
 i want to change the game so that it is a board game, roll dice to move and the map will looks like a user is going around the internet. there will be empty square, action square (where a scenario card will be presented and player must choose an action option for that scenario). The user goal is to reach the end. The scenario should get harder as the game goes on. If player answer wrong, they  will get send back 3 square and lose a life. If sucessful, roll the dice. There will be a game master who will read out the card. 
-
-
-
-
-
-
-
-
-
-
-
-
-
