@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberSafe: Navigate the Internet</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <style>
+        .hero-bg {
+            background: radial-gradient(circle at 50% 30%, #1e3a8a, #0f172a);
+        }
+        .card-animate {
+            transition: all 0.3s ease;
+        }
+        .card-animate:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        .mode-selector {
+            display: none;
+        }
+        .mode-selector.active {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Hero section with animated background -->
+    <header class="hero-bg min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+        <!-- Animated nodes background -->
+        <div class="cyber-nodes"></div>
+        
+        <div class="container mx-auto px-4 py-16 z-10 text-center">
+            <div class="animate-fadeIn">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-cyan-400">CyberSafe</h1>
+                <p class="text-2xl md:text-3xl mb-8 text-gray-300">Navigate the Internet Safely</p>
+                <p class="max-w-2xl mx-auto mb-12 text-gray-400">
+                    A board game experience teaching online safety through real-life Australian cyber scenarios.
+                    Roll the dice, face challenges, and make smart choices to reach the end safely!
+                </p>
+                
+                <!-- Mode Selection Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="game.html" class="start-btn bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-bold py-4 px-8 rounded-lg 
+                       transition duration-300 inline-flex items-center justify-center">
+                        🎮 Play Game
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                    
+                    <a href="learn.html" class="learn-btn bg-purple-600 hover:bg-purple-700 text-white text-lg font-bold py-4 px-8 rounded-lg 
+                       transition duration-300 inline-flex items-center justify-center">
+                        📚 Learn Mode
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Game information section -->
+    <section class="bg-gray-800 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-cyan-400">How to Play</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg card-animate">
+                    <div class="text-4xl mb-4">🎲</div>
+                    <h3 class="text-xl font-bold mb-2">Roll & Move</h3>
+                    <p class="text-gray-300">Roll the dice and navigate your way through the 10×10 internet board.</p>
+                </div>
+                
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg card-animate">
+                    <div class="text-4xl mb-4">🔎</div>
+                    <h3 class="text-xl font-bold mb-2">Face Challenges</h3>
+                    <p class="text-gray-300">Land on action squares to encounter cyber scenarios you need to respond to.</p>
+                </div>
+                
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg card-animate">
+                    <div class="text-4xl mb-4">🏁</div>
+                    <h3 class="text-xl font-bold mb-2">Reach the End</h3>
+                    <p class="text-gray-300">Make smart choices to keep your lives and reach the finish line safely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Threats section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-cyan-400">Cyber Threats You'll Face</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg card-animate border border-gray-700">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-400">🎓 Student Threats</h3>
+                    <p class="text-gray-300">Phishing emails, credential theft, academic fraud, and ransomware targeting educational data.</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg card-animate border border-gray-700">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-400">💼 Office Threats</h3>
+                    <p class="text-gray-300">Business email compromise, password security, public Wi-Fi risks, and insider threats.</p>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg card-animate border border-gray-700">
+                    <h3 class="text-xl font-bold mb-2 text-yellow-400">🏠 Home Threats</h3>
+                    <p class="text-gray-300">Online shopping scams, smart device vulnerabilities, identity theft, and social media fraud.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 py-8 text-center text-gray-400">
+        <p>Created for <strong>Challenge 3 — Vibe Coding: Play to Impact</strong></p>
+        <p>Highlighting cyber threats in Australian schools, offices, and homes</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add pulse animation to start button
+            const startBtn = document.querySelector('.start-btn');
+            setInterval(() => {
+                startBtn.classList.add('animate-pulse');
+                setTimeout(() => {
+                    startBtn.classList.remove('animate-pulse');
+                }, 1000);
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>

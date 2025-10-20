@@ -1,0 +1,479 @@
+{
+  "cards": [
+    {
+      "title": "Fake Online Shopping Site",
+      "message": "You find an online retailer selling the exact laptop you want at 70% off. The website looks professional with good reviews, but the price is significantly lower than anywhere else.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Make the purchase immediately to get the amazing deal",
+          "correct": false,
+          "points": 0,
+          "feedback": "Red flag! Clone websites are designed to look legitimate. Check domain spelling, contact retailers through official sites, and verify reviews."
+        },
+        {
+          "text": "Search the retailer's name and verify it's their official website",
+          "correct": true,
+          "points": 5,
+          "feedback": "Smart! Verify by going to the official website directly or calling the company. Prices too good to be true usually are."
+        },
+        {
+          "text": "Check the reviews and proceed if they're positive",
+          "correct": false,
+          "points": 0,
+          "feedback": "Fake reviews are easy to create. Verify the website domain and contact the company directly instead."
+        }
+      ]
+    },
+    {
+      "title": "Phishing Email at Home",
+      "message": "You receive an email saying your bank account has suspicious activity. It asks you to click a link to verify your identity immediately or your account will be locked.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Click the link immediately to prevent lockout",
+          "correct": false,
+          "points": 0,
+          "feedback": "Phishing attempt! Banks never ask you to verify via email links. Go directly to your bank's official website or call them."
+        },
+        {
+          "text": "Go directly to your bank's website or call their customer service number",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Verify through official channels only. Real banks never threaten account lockout via email."
+        },
+        {
+          "text": "Reply to ask for more information first",
+          "correct": false,
+          "points": 0,
+          "feedback": "Never reply to suspicious emails. This confirms your email is active. Delete it and contact your bank directly."
+        }
+      ]
+    },
+    {
+      "title": "Social Media Account Takeover",
+      "message": "You notice a friend's social media account posted about cryptocurrency investments. This seems very unlike them. You also notice unusual login alerts in your own account.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Ignore it - social media isn't important",
+          "correct": false,
+          "points": 0,
+          "feedback": "Account hijacking is serious! Change your password immediately using a secure device. Tell your friend to do the same."
+        },
+        {
+          "text": "Change your password immediately and warn your friend to secure their account",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Unusual activity means compromised accounts. Act immediately. Warn your friend and protect your own accounts."
+        },
+        {
+          "text": "Post a warning on the social media platform about the hijack",
+          "correct": false,
+          "points": 0,
+          "feedback": "The attacker controls the account. Change your password first, then secure other accounts, then warn friends privately."
+        }
+      ]
+    },
+    {
+      "title": "Smart Home Device Password",
+      "message": "You set up a new smart doorbell camera for your front door. It asks you to set a password. You're tempted to use the default password or something simple since it's 'just for your home.'",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Use the default password or a simple one for convenience",
+          "correct": false,
+          "points": 0,
+          "feedback": "Major security risk! Weak passwords allow attackers to access your home camera and other connected devices. Use a strong, unique password."
+        },
+        {
+          "text": "Create a strong, unique password different from other devices",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Smart devices control access to your home. Strong passwords prevent surveillance and network compromise."
+        },
+        {
+          "text": "Use a password you've used for other home devices",
+          "correct": false,
+          "points": 0,
+          "feedback": "If one device is compromised, all your home devices are at risk. Each device needs a unique strong password."
+        }
+      ]
+    },
+    {
+      "title": "Package Delivery Scam",
+      "message": "You receive a text message saying 'Package delivery failed. Click here to reschedule delivery.' You're expecting a delivery, but something feels off about the message.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Click the link to reschedule your delivery",
+          "correct": false,
+          "points": 0,
+          "feedback": "Delivery scam! Check your official delivery account directly. Don't click unsolicited messages. Scammers steal payment info this way."
+        },
+        {
+          "text": "Check your official delivery account or contact the carrier directly",
+          "correct": true,
+          "points": 5,
+          "feedback": "Smart! Verify through official channels. Legitimate carriers rarely use text links. These are common phishing tactics."
+        },
+        {
+          "text": "Ask a friend if they received a similar message",
+          "correct": false,
+          "points": 0,
+          "feedback": "Good instinct but verify independently. Check your official account or call the carrier directly."
+        }
+      ]
+    },
+    {
+      "title": "Home Network Wi-Fi Security",
+      "message": "Your home Wi-Fi router is 5 years old. You've never changed the default password. Recently you've noticed unknown devices connecting to your network.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Leave it as-is - your home Wi-Fi is low-risk",
+          "correct": false,
+          "points": 0,
+          "feedback": "High risk! Unknown devices mean compromised network. Change your router password immediately and update firmware."
+        },
+        {
+          "text": "Change the router password immediately and update the firmware",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Unknown devices are a major red flag. Secure your network immediately. Attackers can intercept all your data."
+        },
+        {
+          "text": "Check if the unknown devices are from family members",
+          "correct": false,
+          "points": 0,
+          "feedback": "They might not be! Change your password first to stop the intrusion. Then investigate what connected."
+        }
+      ]
+    },
+    {
+      "title": "Card Details on Receipt",
+      "message": "After a shopping trip, you notice your receipt shows your full credit card number. You're keeping it in your wallet. A family member says you should dispose of it securely.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Keep the receipt in your wallet for warranty purposes",
+          "correct": false,
+          "points": 0,
+          "feedback": "Security risk! Full card numbers on receipts can lead to fraud. Shred or destroy receipts with payment information."
+        },
+        {
+          "text": "Shred the receipt securely after confirming the purchase with your bank",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Never keep receipts with card numbers. Dumpster diving for receipts is a real fraud technique."
+        },
+        {
+          "text": "Store it in a safe place at home",
+          "correct": false,
+          "points": 0,
+          "feedback": "Still risky! Receipts with card data should be destroyed, not stored. Shred them securely."
+        }
+      ]
+    },
+    {
+      "title": "Free Antivirus Download",
+      "message": "Your computer is running slowly. You see an ad for 'Free Antivirus - Download Now!' while browsing. It promises to remove viruses and improve performance.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Download and install the free antivirus immediately",
+          "correct": false,
+          "points": 0,
+          "feedback": "Malware red flag! These ads often distribute malware. Use legitimate antivirus like Windows Defender or known providers."
+        },
+        {
+          "text": "Use Windows Defender (included) or purchase from reputable providers",
+          "correct": true,
+          "points": 5,
+          "feedback": "Smart! Free antivirus ads are often malware. Use built-in Windows Defender or trusted paid alternatives."
+        },
+        {
+          "text": "Research the provider before downloading",
+          "correct": false,
+          "points": 0,
+          "feedback": "Even with research, don't download from ads. Use Windows Defender or reputable antivirus providers instead."
+        }
+      ]
+    },
+    {
+      "title": "Social Media Personal Information",
+      "message": "You post frequently on social media - your daily activities, where you're traveling this week, and photos of your family members. Your profile is set to 'public.'",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Continue posting as-is - sharing is normal on social media",
+          "correct": false,
+          "points": 0,
+          "feedback": "Privacy and security risk! Criminals use this info for break-ins, identity theft, and targeting. Limit audience and reduce personal details."
+        },
+        {
+          "text": "Change to private/friends-only and be selective about personal information",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Control who sees your information. Never post real-time location, travel plans, or reveal when you're away."
+        },
+        {
+          "text": "Keep sharing but avoid mentioning when you're away",
+          "correct": false,
+          "points": 0,
+          "feedback": "Better but incomplete! Change to private settings and be more selective about all personal information, not just location."
+        }
+      ]
+    },
+    {
+      "title": "Romance Scam",
+      "message": "You meet someone online who seems perfect. After weeks of chatting, they ask to transfer $2,000 to them 'for an emergency' and promise to pay you back.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Send the money to help someone in need",
+          "correct": false,
+          "points": 0,
+          "feedback": "Romance scam! You'll never see this money or this person again. Never send money to online strangers, even with promises of repayment."
+        },
+        {
+          "text": "Politely decline and end contact if they persist",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct! Real relationships don't involve sudden money requests. This is a classic romance scam tactic."
+        },
+        {
+          "text": "Ask for collateral or a reason for the emergency first",
+          "correct": false,
+          "points": 0,
+          "feedback": "No legitimate reason justifies sending money to online strangers. Scammers have stories prepared for any objection."
+        }
+      ]
+    },
+    {
+      "title": "Unsolicited Tech Support Call",
+      "message": "Someone calls your home saying they're from Microsoft and detected a virus on your computer. They offer to fix it remotely for $99. You recognize nothing unusual with your computer.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Grant remote access and pay the fee",
+          "correct": false,
+          "points": 0,
+          "feedback": "Tech support scam! Microsoft never calls unsolicited. Hang up. These scams steal data and install malware."
+        },
+        {
+          "text": "Hang up immediately. Microsoft never calls unsolicited about viruses",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! This is a classic scam. Real companies don't cold-call about problems. Hang up and don't engage."
+        },
+        {
+          "text": "Ask them for a reference number to verify later",
+          "correct": false,
+          "points": 0,
+          "feedback": "Scammers have scripted answers. Don't engage. Simply hang up. Real support won't call unsolicited."
+        }
+      ]
+    },
+    {
+      "title": "Password Written Down",
+      "message": "You have multiple passwords for your online accounts. You've written them down on a sticky note and stuck it to your monitor at home for easy reference.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Keep the sticky note for convenience",
+          "correct": false,
+          "points": 0,
+          "feedback": "Major security risk! Anyone with access to your home can see them. Use a password manager instead."
+        },
+        {
+          "text": "Use a password manager app to securely store your passwords",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Password managers are secure and convenient. Never write passwords on paper or sticky notes."
+        },
+        {
+          "text": "Move the sticky note to a hidden place in your home",
+          "correct": false,
+          "points": 0,
+          "feedback": "Still not secure enough. Use a password manager instead. Family, guests, or burglars could find written passwords."
+        }
+      ]
+    },
+    {
+      "title": "Lottery Win Scam",
+      "message": "You receive an email saying you've won a lottery you never entered. They claim you won $500,000 and need to pay a $1,000 'processing fee' to claim your prize.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Pay the processing fee to claim your prize",
+          "correct": false,
+          "points": 0,
+          "feedback": "Scam! You never entered. Legitimate lotteries don't require payment to claim prizes. Never send money for 'processing fees.'"
+        },
+        {
+          "text": "Delete the email. Legitimate lotteries don't ask for upfront fees",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Classic advance-fee fraud. Real lotteries deduct taxes from your winnings, never ask for fees upfront."
+        },
+        {
+          "text": "Research the lottery company before responding",
+          "correct": false,
+          "points": 0,
+          "feedback": "There's nothing to research - you didn't enter! This is a scam. Delete it and don't engage."
+        }
+      ]
+    },
+    {
+      "title": "Malware Download",
+      "message": "You're looking for a popular movie online. You find a download site that promises the movie for free. After downloading, your computer starts showing ads everywhere.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Continue using the file - the ads will probably go away",
+          "correct": false,
+          "points": 0,
+          "feedback": "Adware or malware infection! These aggressive ads usually hide worse malware. Scan immediately and consider professional help."
+        },
+        {
+          "text": "Run a full malware scan and remove the infected files",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct action! Use reputable antivirus to scan. In future, use legitimate streaming services instead of downloads."
+        },
+        {
+          "text": "Just delete the movie file",
+          "correct": false,
+          "points": 0,
+          "feedback": "The malware may have spread beyond that file. Run a full system scan to ensure complete removal."
+        }
+      ]
+    },
+    {
+      "title": "Data Broker Privacy",
+      "message": "You discover websites are selling your personal information - name, address, phone, email - for marketing purposes. This data likely came from a data breach you experienced.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Accept it as normal and do nothing",
+          "correct": false,
+          "points": 0,
+          "feedback": "You have rights! Contact the data brokers to request removal. Also freeze your credit to prevent identity theft."
+        },
+        {
+          "text": "Contact the data brokers to request removal and consider a credit freeze",
+          "correct": true,
+          "points": 5,
+          "feedback": "Smart! You can request removal from many data brokers. A credit freeze prevents criminals from opening accounts in your name."
+        },
+        {
+          "text": "Only protect your bank account - other data doesn't matter",
+          "correct": false,
+          "points": 0,
+          "feedback": "Personal data enables many fraud types. Freeze your credit and remove it from data brokers where possible."
+        }
+      ]
+    },
+    {
+      "title": "Family Member Device Access",
+      "message": "Your teenager asks to borrow your laptop 'to do homework.' You leave it unlocked while they're using it and they could see your passwords, banking information, and personal files.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Let them use the laptop unattended - they're family",
+          "correct": false,
+          "points": 0,
+          "feedback": "Risk! Even trusted family members might accidentally access sensitive data. Either supervise or create a separate user account."
+        },
+        {
+          "text": "Create a separate guest/child account or supervise their use",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Separate accounts protect sensitive data. This also prevents accidental changes to your system."
+        },
+        {
+          "text": "Just tell them not to look at sensitive files",
+          "correct": false,
+          "points": 0,
+          "feedback": "Not enough! Accidental clicks happen. Create a separate account or supervise to prevent unauthorized access."
+        }
+      ]
+    },
+    {
+      "title": "Suspicious Software Update",
+      "message": "Your antivirus software shows a notification that your system has viruses and wants you to click 'Update Now!' to fix them immediately. This notification appeared suddenly.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Click 'Update Now!' immediately to fix the viruses",
+          "correct": false,
+          "points": 0,
+          "feedback": "Fake notification! Scareware scam. Open your real antivirus manually to scan. Don't click popup buttons."
+        },
+        {
+          "text": "Close the popup and manually open your real antivirus software to scan",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Scareware uses fake warnings to trick you. Always open software manually, never click suspicious popups."
+        },
+        {
+          "text": "Click update but pay close attention to what's happening",
+          "correct": false,
+          "points": 0,
+          "feedback": "Still risky! Close the popup immediately. Open your legitimate antivirus manually to perform a real scan."
+        }
+      ]
+    },
+    {
+      "title": "Online Banking Security",
+      "message": "You're banking online from your home computer. Your browser shows a 'Not Secure' warning but the site looks like your bank's interface. You proceed anyway because you're in a hurry.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Proceed with banking - the interface is correct",
+          "correct": false,
+          "points": 0,
+          "feedback": "Security risk! 'Not Secure' warnings mean no encryption. This could be a fake site. Close and type the bank's URL directly."
+        },
+        {
+          "text": "Close the site immediately and navigate to your bank's official URL",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! HTTPS (secure) is essential for banking. Never ignore security warnings. Type the URL directly."
+        },
+        {
+          "text": "Use your bank's mobile app instead to bypass the warning",
+          "correct": false,
+          "points": 0,
+          "feedback": "Better choice but first verify - this might still be a fake site. Download the app from official stores only."
+        }
+      ]
+    },
+    {
+      "title": "Public Computer Usage",
+      "message": "You're at a library and need to check your email urgently. You log into your email on a public computer and access your account.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Log in and check your email as needed",
+          "correct": false,
+          "points": 0,
+          "feedback": "High risk! Public computers can have malware or keyloggers. Your credentials could be stolen. Wait or use your phone instead."
+        },
+        {
+          "text": "Use your phone's mobile data instead of the public computer",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Mobile data is encrypted and private. Avoid sensitive activities on public computers."
+        },
+        {
+          "text": "Use a public computer but change your password immediately after",
+          "correct": false,
+          "points": 0,
+          "feedback": "Too risky! Credentials could be stolen before you change the password. Use your phone instead."
+        }
+      ]
+    }
+  ]
+}

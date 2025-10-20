@@ -1,0 +1,479 @@
+{
+  "cards": [
+    {
+      "title": "Suspicious University Email",
+      "message": "You receive an email from 'uni-portal-verify@student.edu.au' asking you to verify your credentials due to a security update. The email looks official with your university logo.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Click the link and enter your credentials to verify",
+          "correct": false,
+          "points": 0,
+          "feedback": "This is a phishing attempt! Notice the slightly different email domain. Always verify by going directly to your university's official website."
+        },
+        {
+          "text": "Go directly to your university's official login page instead",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct! Always navigate directly to official sites rather than clicking email links. This protects against phishing attacks."
+        },
+        {
+          "text": "Reply asking for more information",
+          "correct": false,
+          "points": 0,
+          "feedback": "Never reply to suspicious emails. This confirms your email is active. Delete it instead."
+        }
+      ]
+    },
+    {
+      "title": "Password Sharing Request",
+      "message": "A classmate asks for your university login password because they're behind on assignments and need to access shared files. They say they'll only use it temporarily.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Share your password to help them",
+          "correct": false,
+          "points": 0,
+          "feedback": "Never share passwords! You're responsible for all activity on your account. Instead, help them request their own access or share files directly."
+        },
+        {
+          "text": "Decline and suggest they contact their lecturer",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Lecturers can grant access properly. Your account security is your responsibility."
+        },
+        {
+          "text": "Create a temporary password for them to use",
+          "correct": false,
+          "points": 0,
+          "feedback": "Still sharing your credentials! This violates security policies and could compromise your entire account."
+        }
+      ]
+    },
+    {
+      "title": "Free Software Download",
+      "message": "You need expensive academic software for your coursework. You find a free download on a torrent site that claims to be the legitimate software.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Download the torrent file",
+          "correct": false,
+          "points": 0,
+          "feedback": "Risky! Torrents are common delivery methods for malware. Use legitimate sources like your university's software library or vendor trials."
+        },
+        {
+          "text": "Check if your university provides the software through their IT department",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Universities often provide licenses to students. Always check IT resources first before looking elsewhere."
+        },
+        {
+          "text": "Ask classmates for their license key",
+          "correct": false,
+          "points": 0,
+          "feedback": "License keys are personal and non-transferable. This violates licensing agreements."
+        }
+      ]
+    },
+    {
+      "title": "Public Wi-Fi at Campus",
+      "message": "You're in the university library studying when your laptop asks if you want to connect to 'University Free Wi-Fi - No Password'. You notice other students are connected.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Connect to browse social media while studying",
+          "correct": false,
+          "points": 0,
+          "feedback": "Be cautious! This could be an 'evil twin' network. Always ask staff for the official network name or use mobile data for sensitive tasks."
+        },
+        {
+          "text": "Ask a staff member to confirm the network name before connecting",
+          "correct": true,
+          "points": 5,
+          "feedback": "Smart! Verify Wi-Fi networks through official channels. Attackers often create fake networks at universities."
+        },
+        {
+          "text": "Connect but avoid accessing your bank account",
+          "correct": false,
+          "points": 0,
+          "feedback": "Attackers can intercept any data on unverified networks, not just banking. Always verify first."
+        }
+      ]
+    },
+    {
+      "title": "Ransomware Warning",
+      "message": "Your laptop screen goes dark and displays a warning: 'Your files have been encrypted. Pay $500 in Bitcoin to restore access.' You have important assignment work on this computer.",
+      "difficulty": 3,
+      "options": [
+        {
+          "text": "Pay the ransom immediately to recover your files",
+          "correct": false,
+          "points": 0,
+          "feedback": "Never pay ransoms! They don't guarantee file recovery and fund criminal activities. Disconnect, report to IT, and restore from backups."
+        },
+        {
+          "text": "Disconnect the computer from the network and report it to university IT immediately",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct! Isolation prevents spread. University IT has recovery tools and backups. Contact them immediately."
+        },
+        {
+          "text": "Try to delete the warning message yourself",
+          "correct": false,
+          "points": 0,
+          "feedback": "This won't remove the encryption. Professional help is needed. Get your IT department involved immediately."
+        }
+      ]
+    },
+    {
+      "title": "Too Good to Be True Scholarship",
+      "message": "You receive an email saying you've won a $10,000 scholarship but need to pay a $200 application fee upfront. They ask for your bank details to process it.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Pay the fee and provide your bank details",
+          "correct": false,
+          "points": 0,
+          "feedback": "Scam alert! Legitimate scholarships never require upfront payments. This is advance-fee fraud."
+        },
+        {
+          "text": "Check with your university's scholarship office first",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Universities can verify scholarship legitimacy. Real scholarships never ask for upfront fees."
+        },
+        {
+          "text": "Ask friends if they received the same email",
+          "correct": false,
+          "points": 0,
+          "feedback": "While crowdsourcing can help, verify directly with official sources. Many people may fall for the same scam."
+        }
+      ]
+    },
+    {
+      "title": "Social Media Research Study",
+      "message": "A researcher from your university sends you a link to participate in a paid research study about social media habits. They ask for your email, phone number, and academic credentials.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Provide all information requested to participate",
+          "correct": false,
+          "points": 0,
+          "feedback": "Be cautious with personal data. Verify the researcher through your university's official directory first. Don't share academic credentials."
+        },
+        {
+          "text": "Look up the researcher on the university website and contact them directly",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Always verify researchers through official university channels. Never click links in unsolicited emails."
+        },
+        {
+          "text": "Provide basic information but skip the academic credentials",
+          "correct": false,
+          "points": 0,
+          "feedback": "Still risky! Verify first. This could be identity fraud despite partial information."
+        }
+      ]
+    },
+    {
+      "title": "Laptop Left Unattended",
+      "message": "You leave your laptop open in the university library while you get a coffee. When you return after 10 minutes, it looks untouched but your heart rate increases.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Assume nothing happened since it looks the same and continue working",
+          "correct": false,
+          "points": 0,
+          "feedback": "Someone could have installed malware or accessed your files. Lock or shut down in future. Run a security scan now."
+        },
+        {
+          "text": "Never leave it unattended again and run a malware scan when you get home",
+          "correct": true,
+          "points": 5,
+          "feedback": "Good practice! Always lock your screen (Windows+L) or close the laptop. Check for unauthorized changes."
+        },
+        {
+          "text": "Change your passwords immediately at home",
+          "correct": false,
+          "points": 0,
+          "feedback": "Good idea but incomplete. First scan for malware, as you may transmit your new password to attackers."
+        }
+      ]
+    },
+    {
+      "title": "Data Breach Notification",
+      "message": "You receive an email from your university saying student records were compromised in a data breach. Your name, DOB, and student ID were potentially exposed. It asks you to verify your details.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Click the link and verify your details as instructed",
+          "correct": false,
+          "points": 0,
+          "feedback": "This could be a phishing email using the breach as a pretext. Go directly to your university's official site or call their IT department."
+        },
+        {
+          "text": "Contact your university's IT department directly using their official phone number",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Verify through official channels. Real breach notifications don't ask for details via links."
+        },
+        {
+          "text": "Monitor your credit report and bank account carefully",
+          "correct": false,
+          "points": 0,
+          "feedback": "Good precaution but you need to verify the breach first! Contact the university directly before taking other steps."
+        }
+      ]
+    },
+    {
+      "title": "Cryptocurrency Investment Pitch",
+      "message": "A student friend invites you to join a 'guaranteed' cryptocurrency investment group. They claim to make 50% returns monthly and just need your initial investment.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Invest some money to get started",
+          "correct": false,
+          "points": 0,
+          "feedback": "This is likely a Ponzi scheme! No investment guarantees 50% monthly returns. If it sounds too good, it probably is."
+        },
+        {
+          "text": "Politely decline and avoid similar 'opportunities'",
+          "correct": true,
+          "points": 5,
+          "feedback": "Wise decision! These are common scams targeting students. Legitimate investments never guarantee such returns."
+        },
+        {
+          "text": "Ask for a written guarantee of returns before investing",
+          "correct": false,
+          "points": 0,
+          "feedback": "Even with documentation, this is a scam. No legitimate investment can guarantee returns, especially at 50% monthly."
+        }
+      ]
+    },
+    {
+      "title": "Fake Exam Alert",
+      "message": "You receive a WhatsApp message from your course group chat saying exams have been postponed and to check a link for details. The message has slight grammar errors.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Click the link immediately to get exam details",
+          "correct": false,
+          "points": 0,
+          "feedback": "Red flags! Check your university's official portal or contact your lecturer directly. Grammar errors suggest a scam."
+        },
+        {
+          "text": "Check your university's official exam schedule portal",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct! Never trust unverified messages in group chats. Always check official university sources for schedule changes."
+        },
+        {
+          "text": "Ask other students in the chat if they received the message",
+          "correct": false,
+          "points": 0,
+          "feedback": "They may all be confused too! Go to official sources instead. Scammers often target whole groups."
+        }
+      ]
+    },
+    {
+      "title": "Internship Application Email",
+      "message": "You apply for a prestigious internship and receive an email within hours offering you the position. They ask for your tax file number, bank account, and address to process the offer. The email contains no specific job details.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Provide the information to secure the internship",
+          "correct": false,
+          "points": 0,
+          "feedback": "This is a job scam! Legitimate companies don't ask for tax file numbers or bank details before employment. Research the company."
+        },
+        {
+          "text": "Research the company on their official website and contact them directly",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Verify everything through official channels. Scammers impersonate real companies. Call their main number to confirm."
+        },
+        {
+          "text": "Ask your university's careers office about this opportunity",
+          "correct": false,
+          "points": 0,
+          "feedback": "Good idea to check with careers, but still verify the company independently first through their official website."
+        }
+      ]
+    },
+    {
+      "title": "Lab Computer Security Update",
+      "message": "Your university lab computer displays a pop-up saying 'Security Update Required' and asks for your student ID and password. It has the university logo and looks official.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Enter your credentials to complete the update",
+          "correct": false,
+          "points": 0,
+          "feedback": "This is likely a fake security prompt installed on the lab computer. Never enter credentials into pop-ups. Ask lab staff."
+        },
+        {
+          "text": "Close the pop-up and report it to lab IT staff immediately",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Legitimate updates don't ask for credentials. Lab staff need to know about this security issue immediately."
+        },
+        {
+          "text": "Ignore the pop-up and continue working",
+          "correct": false,
+          "points": 0,
+          "feedback": "The pop-up may have already captured information. Report it so IT can investigate and clean the computer."
+        }
+      ]
+    },
+    {
+      "title": "Rooming House Wi-Fi",
+      "message": "You're living in a student rooming house. The landlord provides free Wi-Fi but never changed the default router password. Several people have access to the network.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Use it as-is since everyone else is using it",
+          "correct": false,
+          "points": 0,
+          "feedback": "Risk! Anyone can intercept your data on networks with default passwords. Use mobile data for sensitive tasks or ask landlord to secure it."
+        },
+        {
+          "text": "Request the landlord change the router password to something secure",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Default passwords are a major security risk. Secure Wi-Fi protects everyone's data on the network."
+        },
+        {
+          "text": "Set up a VPN on your device for added security",
+          "correct": false,
+          "points": 0,
+          "feedback": "VPN helps but the root problem remains. Push for the router to be properly secured with a strong password."
+        }
+      ]
+    },
+    {
+      "title": "Grade Correction Phishing",
+      "message": "An email appears to be from your lecturer saying there was an error in grade entry. It asks you to click a link to verify your student number so they can correct it. The link looks suspicious with odd characters.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Click the link to verify your information",
+          "correct": false,
+          "points": 0,
+          "feedback": "Phishing attempt! Lecturers use official university email and wouldn't ask for verification via links. Contact your lecturer directly."
+        },
+        {
+          "text": "Email your lecturer directly using their official university address",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct! Always verify through official channels. Grade changes are made through proper systems, not email links."
+        },
+        {
+          "text": "Check your actual grade in the university system first",
+          "correct": false,
+          "points": 0,
+          "feedback": "Good idea to verify, but don't click suspicious links even while checking. Go directly to the official system."
+        }
+      ]
+    },
+    {
+      "title": "Borrowed Laptop Security",
+      "message": "You borrow a friend's laptop to do an assignment. Your friend says, 'Just use my login, it's easier.' The laptop doesn't have antivirus software installed.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Use your friend's login to access the laptop",
+          "correct": false,
+          "points": 0,
+          "feedback": "Risky! Using someone else's account could expose their files to your activity. Plus, no antivirus is dangerous."
+        },
+        {
+          "text": "Decline and use a public computer lab or your own device instead",
+          "correct": true,
+          "points": 5,
+          "feedback": "Smart choice! Protect both your data and your friend's. Use trusted devices with proper security."
+        },
+        {
+          "text": "Create a new user account on the laptop without antivirus",
+          "correct": false,
+          "points": 0,
+          "feedback": "Still risky! The lack of antivirus is a major problem. Your assignment could expose you to malware."
+        }
+      ]
+    },
+    {
+      "title": "Research Data Security",
+      "message": "You're working on a research project with sensitive survey data. Your professor asks you to email the data file to a cloud storage account. The email doesn't mention encryption.",
+      "difficulty": 3,
+      "options": [
+        {
+          "text": "Send the file over email as requested",
+          "correct": false,
+          "points": 0,
+          "feedback": "Risky without encryption! Email is not secure for sensitive data. Ask about secure file transfer protocols or encrypted storage."
+        },
+        {
+          "text": "Ask your professor about secure data transfer methods and encryption",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Protecting research participants' data is crucial. Universities have secure systems designed for this purpose."
+        },
+        {
+          "text": "Use password protection on the file then send it",
+          "correct": false,
+          "points": 0,
+          "feedback": "Better than nothing, but not enough for sensitive data. Institutional secure transfer systems are required."
+        }
+      ]
+    },
+    {
+      "title": "Student Job Verification",
+      "message": "You apply for a casual job at a cafe near campus. The manager says you're hired and asks for your date of birth, driver's license number, and bank account details via text message before your first shift.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Provide all the information requested via text",
+          "correct": false,
+          "points": 0,
+          "feedback": "Red flags! Legitimate employers use secure forms, not text. Verify the job exists by calling the cafe directly."
+        },
+        {
+          "text": "Call the cafe's main number to verify the job offer before providing personal details",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Always verify job offers through official channels. Scammers impersonate real businesses to steal personal data."
+        },
+        {
+          "text": "Provide limited information like name and phone number",
+          "correct": false,
+          "points": 0,
+          "feedback": "Still not safe via text! Verify the job legitimacy first. Then provide information through secure channels."
+        }
+      ]
+    },
+    {
+      "title": "Shared Drive Oversharing",
+      "message": "Your group project team sets up a Google Drive to collaborate. One member adds 'anyone with the link can view' permissions and posts the link in a public university forum.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Leave the permissions as-is since it's just coursework",
+          "correct": false,
+          "points": 0,
+          "feedback": "Data privacy issue! Change permissions to 'specific people only'. Your group members' emails shouldn't be exposed."
+        },
+        {
+          "text": "Change permissions to 'specific people can edit' and remove the public link",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Protect your team's work and privacy. Only invited collaborators should have access to shared files."
+        },
+        {
+          "text": "Leave it public but password-protect all files inside",
+          "correct": false,
+          "points": 0,
+          "feedback": "File-level passwords aren't reliable. Folder permissions are the first line of defense."
+        }
+      ]
+    }
+  ]
+}

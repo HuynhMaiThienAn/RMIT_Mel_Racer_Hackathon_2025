@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberSafe: Learn Mode</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <style>
+        .scenario-card {
+            transition: all 0.3s ease;
+        }
+        .scenario-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .category-section {
+            animation: slideInCard 0.5s ease-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Header -->
+    <header class="bg-gray-900 bg-opacity-80 py-3 px-6 border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-cyan-400">📚 Learn Mode</h1>
+                <span class="mx-2 text-gray-600">|</span>
+                <span class="text-sm text-gray-400">Explore all cyber scenarios</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-gray-400 hover:text-white text-sm">Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="min-h-screen py-12 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-cyan-400 mb-4">All Cyber Scenarios</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Browse through all the scenarios in CyberSafe. Learn about common cyber threats and the best practices to stay safe online.
+                    Filter by category or difficulty to find what interests you most.
+                </p>
+            </div>
+
+            <!-- Search/Filter section -->
+            <div class="mb-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <input type="text" id="search-input" placeholder="Search scenarios..." 
+                    class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 w-full sm:w-64">
+                
+                <select id="category-filter" class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500">
+                    <option value="">All Categories</option>
+                    <option value="student">🎓 Student</option>
+                    <option value="office">💼 Office</option>
+                    <option value="home">🏠 Home</option>
+                </select>
+
+                <select id="difficulty-filter" class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500">
+                    <option value="">All Difficulties</option>
+                    <option value="1">⭐ Easy</option>
+                    <option value="2">⭐⭐ Medium</option>
+                    <option value="3">⭐⭐⭐ Hard</option>
+                </select>
+            </div>
+
+            <!-- Loading indicator -->
+            <div id="loading" class="text-center text-gray-400 py-12">
+                <div class="inline-block">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400"></div>
+                    <p class="mt-4">Loading scenarios...</p>
+                </div>
+            </div>
+
+            <!-- Cards container -->
+            <div id="cards-container" class="space-y-12 hidden">
+                <!-- Categories and cards will be loaded here -->
+            </div>
+
+            <!-- Error message -->
+            <div id="error-message" class="text-center text-red-400 py-12 hidden">
+                Failed to load scenarios. Please try refreshing the page.
+            </div>
+
+            <!-- No results message -->
+            <div id="no-results" class="text-center text-gray-400 py-12 hidden">
+                No scenarios found matching your search. Try different filters.
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 text-center text-gray-400 border-t border-gray-700">
+        <p>CyberSafe - Learn Mode | Teaching online safety through Australian cyber scenarios</p>
+        <p>Created for Challenge 3 — Vibe Coding: Play to Impact</p>
+    </footer>
+
+    <script>
+        let allCards = [];
+        let filteredCards = [];
+
+        // Load scenarios on page load
+        document.addEventListener('DOMContentLoaded', loadScenarios);
+
+        // Event listeners for search and filters
+        document.getElementById('search-input').addEventListener('input', filterCards);
+        document.getElementById('category-filter').addEventListener('change', filterCards);
+        document.getElementById('difficulty-filter').addEventListener('change', filterCards);
+
+        async function loadScenarios() {
+            const loading = document.getElementById('loading');
+            const container = document.getElementById('cards-container');
+            const errorMsg = document.getElementById('error-message');
+
+            try {
+                const files = [
+                    { name: 'data/student.json', category: 'student' },
+                    { name: 'data/office.json', category: 'office' },
+                    { name: 'data/home.json', category: 'home' }
+                ];
+
+                allCards = [];
+
+                const results = await Promise.all(files.map(f => 
+                    fetch(f.name)
+                        .then(r => r.ok ? r.json() : null)
+                        .catch(() => null)
+                ));
+
+                results.forEach((res, idx) => {
+                    if (!res) return;
+
+                    const category = files[idx].category;
+                    const categoryEmoji = {
+                        'student': '🎓',
+                        'office': '💼',
+                        'home': '🏠'
+                    }[category] || '📂';
+
+                    if (Array.isArray(res.cards)) {
+                        res.cards.forEach(card => {
+                            allCards.push({ 
+                                ...card, 
+                                category,
+                                categoryEmoji,
+                                categoryLabel: category.charAt(0).toUpperCase() + category.slice(1)
+                            });
+                        });
+                    }
+                });
+
+                if (allCards.length === 0) {
+                    errorMsg.classList.remove('hidden');
+                    loading.classList.add('hidden');
+                    return;
+                }
+
+                filteredCards = allCards;
+                displayCards();
+                loading.classList.add('hidden');
+                container.classList.remove('hidden');
+
+            } catch (error) {
+                console.error('Error loading scenarios:', error);
+                errorMsg.classList.remove('hidden');
+                loading.classList.add('hidden');
+            }
+        }
+
+        function filterCards() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const categoryFilter = document.getElementById('category-filter').value;
+            const difficultyFilter = document.getElementById('difficulty-filter').value;
+
+            filteredCards = allCards.filter(card => {
+                const matchesSearch = card.title.toLowerCase().includes(searchTerm) || 
+                                    card.message.toLowerCase().includes(searchTerm);
+                const matchesCategory = !categoryFilter || card.category === categoryFilter;
+                const matchesDifficulty = !difficultyFilter || card.difficulty.toString() === difficultyFilter;
+                
+                return matchesSearch && matchesCategory && matchesDifficulty;
+            });
+
+            displayCards();
+        }
+
+        function displayCards() {
+            const container = document.getElementById('cards-container');
+            const noResults = document.getElementById('no-results');
+            
+            container.innerHTML = '';
+            noResults.classList.add('hidden');
+
+            if (filteredCards.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            // Group cards by category
+            const categories = {};
+            filteredCards.forEach(card => {
+                if (!categories[card.category]) {
+                    categories[card.category] = [];
+                }
+                categories[card.category].push(card);
+            });
+
+            // Display grouped cards
+            const categoryOrder = ['student', 'office', 'home'];
+            categoryOrder.forEach(category => {
+                if (!categories[category]) return;
+
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category-section';
+
+                const emoji = {
+                    'student': '🎓',
+                    'office': '💼',
+                    'home': '🏠'
+                }[category] || '📂';
+
+                const categoryTitle = document.createElement('h3');
+                categoryTitle.className = 'text-2xl font-bold text-cyan-400 mb-6 capitalize flex items-center';
+                categoryTitle.innerHTML = `<span class="mr-3 text-3xl">${emoji}</span>${category} Threats (${categories[category].length} scenarios)`;
+                categoryDiv.appendChild(categoryTitle);
+
+                const cardsGrid = document.createElement('div');
+                cardsGrid.className = 'grid md:grid-cols-2 lg:grid-cols-3 gap-6';
+
+                categories[category].forEach((card, idx) => {
+                    const cardEl = createScenarioCard(card, idx);
+                    cardsGrid.appendChild(cardEl);
+                });
+
+                categoryDiv.appendChild(cardsGrid);
+                container.appendChild(categoryDiv);
+            });
+        }
+
+        function createScenarioCard(card, idx) {
+            const cardEl = document.createElement('div');
+            cardEl.className = 'scenario-card bg-gray-800 p-6 rounded-lg border border-gray-700 cursor-pointer';
+
+            const difficulty = '⭐'.repeat(Math.min(3, Math.max(1, card.difficulty || 1)));
+
+            let optionsHtml = '';
+            if (card.options && card.options.length > 0) {
+                optionsHtml = '<div class="mt-4 space-y-2 border-t border-gray-600 pt-4">';
+                // Sort options so correct answer appears first in Learn mode
+                const sortedOptions = [...card.options].sort((a, b) => {
+                    const aIsCorrect = a.correct ? true : false;
+                    const bIsCorrect = b.correct ? true : false;
+                    return bIsCorrect - aIsCorrect; // Correct answers come first
+                });
+                
+                sortedOptions.forEach((opt, optIdx) => {
+                    const isCorrect = opt.correct ? true : false;
+                    const color = isCorrect ? 'text-green-400' : 'text-red-400';
+                    const icon = isCorrect ? '✅' : '❌';
+                    optionsHtml += `<div class="text-sm ${color}">${icon} ${opt.text || opt.choice || `Option ${optIdx + 1}`}</div>`;
+                });
+                optionsHtml += '</div>';
+            }
+
+            cardEl.innerHTML = `
+                <h4 class="font-bold text-lg text-yellow-400 mb-2">${card.title || 'Scenario'}</h4>
+                <div class="text-cyan-300 text-xs mb-3">${difficulty}</div>
+                <p class="text-gray-300 text-sm mb-4 line-clamp-3">${card.message || card.text || ''}</p>
+                ${optionsHtml}
+            `;
+
+            // Toggle expanded view on click
+            cardEl.addEventListener('click', () => {
+                if (cardEl.classList.contains('expanded')) {
+                    cardEl.classList.remove('expanded', 'bg-gray-700', 'border-cyan-500');
+                    cardEl.classList.add('bg-gray-800', 'border-gray-700');
+                    // Restore line-clamp
+                    const pEl = cardEl.querySelector('p');
+                    if (pEl) pEl.classList.add('line-clamp-3');
+                } else {
+                    cardEl.classList.add('expanded', 'bg-gray-700', 'border-cyan-500');
+                    cardEl.classList.remove('bg-gray-800', 'border-gray-700');
+                    // Remove line-clamp to show full text
+                    const pEl = cardEl.querySelector('p');
+                    if (pEl) pEl.classList.remove('line-clamp-3');
+                }
+            });
+
+            return cardEl;
+        }
+    </script>
+</body>
+
+</html>

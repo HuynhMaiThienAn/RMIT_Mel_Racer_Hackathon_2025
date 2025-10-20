@@ -1,0 +1,214 @@
+/* Animations for CyberSafe game */
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-pulse {
+  animation: pulse 1s ease-in-out;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite ease-in-out;
+}
+.animate-bounce:disabled {
+  animation: none;
+}
+
+/* Spin animation for dice */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(72deg); }
+  40% { transform: rotate(144deg); }
+  60% { transform: rotate(216deg); }
+  80% { transform: rotate(288deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 0.8s ease-in-out infinite;
+}
+
+/* Dice roll animation */
+@keyframes diceRoll {
+  0%, 100% { content: "⚀"; }
+  16% { content: "⚁"; }
+  33% { content: "⚂"; }
+  50% { content: "⚃"; }
+  67% { content: "⚄"; }
+  84% { content: "⚅"; }
+}
+
+/* Movement animation */
+@keyframes moveToken {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-move {
+  animation: moveToken 0.5s ease-out;
+}
+
+/* Character movement animation */
+@keyframes moveToken {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.token-move {
+  animation: moveToken 0.4s ease-in-out;
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.3s forwards;
+}
+
+/* Card appear animation */
+@keyframes cardAppear {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.card-appear {
+  animation: cardAppear 0.3s ease-out forwards;
+}
+
+/* Random event card animation */
+.random-event-card {
+  animation: eventCardAppear 0.5s ease-out forwards;
+}
+
+@keyframes eventCardAppear {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Shine effect for positive events */
+@keyframes shine {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shine-effect {
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.2) 50%, 
+    rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shine 2s infinite;
+}
+
+/* Shake effect for negative events */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake-effect {
+  animation: shake 0.5s;
+}
+
+/* Shake animation for losing a life */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake-effect {
+  animation: shake 0.5s;
+}
+
+/* Card popup animation */
+@keyframes slideInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#scenario-card {
+  animation: slideInCard 0.5s ease-out;
+}
+
+/* Victory popup animation */
+@keyframes popupBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(-50px);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.popup-message {
+  animation: popupBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Confetti animation */
+@keyframes confetti-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px) rotateZ(360deg);
+  }
+}
+
+.confetti {
+  animation: confetti-fall 3s ease-out forwards;
+}
+
+/* Game over fade */
+@keyframes fadeInDark {
+  0% {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.game-over-overlay {
+  animation: fadeInDark 0.5s ease-out;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberSafe: Game Board</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <!-- Game script -->
+    <script defer src="js/game.js"></script>
+</head>
+
+<body class="board-bg min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gray-900 bg-opacity-80 py-3 px-6 flex justify-between items-center border-b border-gray-800">
+        <div class="flex items-center">
+            <h1 class="text-xl font-bold text-cyan-400">CyberSafe</h1>
+            <span class="mx-2 text-gray-600">|</span>
+            <span class="text-sm text-gray-400">Navigate the Internet</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button id="restart-btn" class="text-sm bg-yellow-600 hover:bg-yellow-700 px-3 py-1 rounded text-white font-semibold transition">
+                🔄 Restart
+            </button>
+            <a href="index.html" class="text-gray-400 hover:text-white text-sm">Home</a>
+        </div>
+    </header>
+
+    <!-- Game interface -->
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="board-shell bg-gray-900 rounded-2xl shadow-2xl p-4 w-full max-w-6xl grid grid-cols-12 gap-4 animate-fadeIn">
+            <!-- Left: Game info & dice -->
+            <section class="col-span-3 flex flex-col space-y-4">
+                <!-- Stats -->
+                <div class="bg-gray-800 p-3 rounded-xl">
+                    <h3 class="text-cyan-400 font-bold mb-2 text-center">Game Stats</h3>
+                    <div class="flex justify-between mb-3">
+                        <div class="score-container flex items-center gap-2">
+                            <span class="text-cyan-300 text-lg">🏆</span>
+                            <p id="score" class="text-cyan-300 font-mono">Score: 0</p>
+                        </div>
+                        <div class="lives-container flex items-center gap-2">
+                            <span class="text-yellow-300 text-lg">❤️</span>
+                            <p id="lives" class="text-yellow-300 font-mono">Lives: 3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dice -->
+                <div class="bg-gray-800 p-3 rounded-xl flex flex-col items-center">
+                    <h3 class="text-cyan-400 font-bold mb-3 text-center">Roll Dice</h3>
+                    <div id="dice-container" class="my-4 relative">
+                        <div id="dice-display" class="text-7xl">🎲</div>
+                    </div>
+                    <button id="dice-btn" class="w-full bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg text-white font-semibold">
+                        Roll Dice
+                    </button>
+                </div>
+
+                <!-- Current Activity -->
+                <div class="bg-gray-800 p-3 rounded-xl">
+                    <h3 class="text-cyan-400 font-bold mb-2 text-center">Activity Log</h3>
+                    <div id="chat-container" class="chat-area h-[30vh] overflow-y-auto">
+                        <!-- Chat messages will appear here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Center: Board -->
+            <section class="col-span-6 flex flex-col">
+                <div class="w-full mb-3 text-center">
+                    <h2 class="text-lg font-bold text-cyan-400">Internet Navigation Board</h2>
+                    <p class="text-xs text-gray-400">Travel across the internet safely to reach the finish line</p>
+                </div>
+
+                <!-- Board matrix container -->
+                <div id="board" class="board-grid w-full h-full"></div>
+            </section>
+
+            <!-- Right: Scenario Card -->
+            <section class="col-span-3 flex flex-col space-y-4">
+                <!-- Scenario Card Display -->
+                <div id="scenario-card" class="bg-gray-800 p-4 rounded-xl flex-grow hidden">
+                    <div class="card-header border-b border-gray-700 pb-2 mb-3">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-yellow-400 font-bold">Scenario Card</h3>
+                            <span id="card-difficulty" class="text-yellow-300">⭐</span>
+                        </div>
+                    </div>
+                    <div id="card-content" class="mb-4">
+                        <h4 id="card-title" class="text-white font-semibold mb-2"></h4>
+                        <p id="card-text" class="text-gray-300 text-sm"></p>
+                    </div>
+                    <div id="choices" class="choices-area mt-4">
+                        <!-- Choices will appear here -->
+                    </div>
+                </div>
+
+                <!-- Instructions (shown when no card) -->
+                <div id="instructions" class="bg-gray-800 p-4 rounded-xl flex-grow">
+                    <h3 class="text-cyan-400 font-bold mb-3">How To Play</h3>
+                    <ul class="text-gray-300 text-sm space-y-2">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-xl">🎲</span>
+                            <span>Roll the dice to move your token</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-xl">🔎</span>
+                            <span>Yellow squares present scenarios</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-xl">⬆️</span>
+                            <span>Green squares move you forward</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-xl">⬇️</span>
+                            <span>Red squares move you backward</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-xl">❤️</span>
+                            <span>Purple squares give powerups</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-xl">✨</span>
+                            <span>Random events may occur on rolls</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-xl">🏁</span>
+                            <span>Reach the finish line to win!</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="text-yellow-400 font-bold mt-4 mb-1">Special Powerups</h4>
+                    <div class="grid grid-cols-3 gap-2 text-xs">
+                        <div class="bg-gray-700 p-2 rounded text-center">
+                            <div>❤️</div>
+                            <span>Extra Life</span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded text-center">
+                            <div>🛡️</div>
+                            <span>Protection</span>
+                        </div>
+                        <div class="bg-gray-700 p-2 rounded text-center">
+                            <div>🎲</div>
+                            <span>Extra Roll</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-80 py-3 px-6 text-center text-gray-500 text-sm border-t border-gray-800">
+        <p>CyberSafe Game - Teaching online safety through Australian cyber scenarios</p>
+        <p>Created for Challenge 3 — Vibe Coding: Play to Impact</p>
+    </footer>
+
+    <script>
+        // Restart button functionality
+        document.getElementById('restart-btn').addEventListener('click', function() {
+            location.reload();
+        });
+    </script>
+</body>
+
+</html>

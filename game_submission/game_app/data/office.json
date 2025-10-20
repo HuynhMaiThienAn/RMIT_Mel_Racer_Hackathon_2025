@@ -1,0 +1,454 @@
+{
+  "cards": [
+    {
+      "title": "Business Email Compromise",
+      "message": "You receive an urgent email from your CEO requesting you transfer $50,000 to a vendor account for a time-sensitive project. The email address looks very similar to the CEO's official address with one letter different.",
+      "difficulty": 3,
+      "options": [
+        {
+          "text": "Process the transfer immediately to meet the deadline",
+          "correct": false,
+          "points": 0,
+          "feedback": "BEC fraud! Never process large transfers based on email alone. Call your CEO directly on a known number to verify."
+        },
+        {
+          "text": "Call your CEO directly using their known phone number to verify the request",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! BEC attacks are highly sophisticated. Always verify large requests through direct contact, not email."
+        },
+        {
+          "text": "Ask the vendor to confirm the account details",
+          "correct": false,
+          "points": 0,
+          "feedback": "The vendor account details may be compromised too! Call your CEO directly instead to verify the entire transaction."
+        }
+      ]
+    },
+    {
+      "title": "Public Wi-Fi Banking",
+      "message": "You're at an airport with time before your flight. You notice free 'AirportFree_WiFi' network available. You decide to check your work emails and bank account while waiting.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Connect and access your banking and work email",
+          "correct": false,
+          "points": 0,
+          "feedback": "Dangerous! Public Wi-Fi can be intercepted. Use mobile hotspot for sensitive tasks. Attackers create fake networks like this."
+        },
+        {
+          "text": "Use your phone's hotspot or wait until on a verified network",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Mobile hotspots are encrypted. Never access banking or work data on public Wi-Fi, even with VPN."
+        },
+        {
+          "text": "Use a VPN to secure the connection then proceed",
+          "correct": false,
+          "points": 0,
+          "feedback": "VPN helps but public Wi-Fi networks can still be compromised. Use mobile hotspot for banking especially."
+        }
+      ]
+    },
+    {
+      "title": "Password Reuse",
+      "message": "You have 47 different passwords for various work systems. You're struggling to remember them all, so you use the same strong password for your email, banking, and work systems.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Continue using the same password across systems for simplicity",
+          "correct": false,
+          "points": 0,
+          "feedback": "Critical risk! If one system is compromised, all your accounts are exposed. Use a password manager and unique passwords."
+        },
+        {
+          "text": "Use a password manager to create and store unique passwords for each account",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Password managers make this easy. Unique passwords mean one breach doesn't compromise everything."
+        },
+        {
+          "text": "Use two different passwords - one for work and one for personal",
+          "correct": false,
+          "points": 0,
+          "feedback": "Better than one password, but still risky. Each system should have a unique password. Use a password manager."
+        }
+      ]
+    },
+    {
+      "title": "Personal Device Work Access",
+      "message": "Your company allows you to work from home using your personal laptop. IT asks if you have antivirus software and security updates installed. You haven't updated in 6 months.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Say yes to move forward quickly and install updates later",
+          "correct": false,
+          "points": 0,
+          "feedback": "Risk! Your outdated device could compromise company data. Be honest with IT and update immediately before accessing work systems."
+        },
+        {
+          "text": "Be honest with IT, update everything, then get approval to proceed",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! This protects both you and the company. Security updates close critical vulnerabilities."
+        },
+        {
+          "text": "Ask to use a company laptop instead of your personal device",
+          "correct": false,
+          "points": 0,
+          "feedback": "Good idea if possible, but your personal device can be secure if properly maintained. Update now and be transparent with IT."
+        }
+      ]
+    },
+    {
+      "title": "Suspicious USB Device",
+      "message": "You find a USB drive labeled 'Executive Salary Review' in the office parking lot. Out of curiosity, you plug it into your work computer to see what's on it.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Insert it into your work computer immediately",
+          "correct": false,
+          "points": 0,
+          "feedback": "Classic malware delivery! Unknown USB drives are high risk. Report it to IT security instead."
+        },
+        {
+          "text": "Report it to your IT department and let them investigate safely",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct! This is a classic attack vector. IT has tools to safely analyze unknown devices in isolated environments."
+        },
+        {
+          "text": "Insert it only in an older computer with less important data",
+          "correct": false,
+          "points": 0,
+          "feedback": "Still risky! Even old computers can spread malware to the network. Report to IT instead."
+        }
+      ]
+    },
+    {
+      "title": "Contractor Access Request",
+      "message": "A contractor emails your team requesting access to the company file server 'to complete their project.' They say their manager should have already authorized it. You don't recognize their manager's name.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Grant the access to keep the project moving",
+          "correct": false,
+          "points": 0,
+          "feedback": "Risk! Verify through official channels first. Contact the actual project manager directly, not the email sender."
+        },
+        {
+          "text": "Contact your manager and IT to verify the contractor and proper access procedures",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Verify contractor access through official channels. Social engineering often impersonates legitimate contractors."
+        },
+        {
+          "text": "Grant limited access until it's verified",
+          "correct": false,
+          "points": 0,
+          "feedback": "Even limited access can cause damage if unauthorized. Verify first, then grant appropriate access through proper procedures."
+        }
+      ]
+    },
+    {
+      "title": "Insider Information Leak",
+      "message": "A colleague casually mentions they've been sharing details about your company's unreleased product with friends outside the company at parties and on social media.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Say nothing - it's not your responsibility",
+          "correct": false,
+          "points": 0,
+          "feedback": "This is a data breach! Report it to your manager or compliance department. Insider threats are serious."
+        },
+        {
+          "text": "Report it to your manager or compliance department immediately",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Insider threats must be reported. Your company needs to know about information leaks immediately."
+        },
+        {
+          "text": "Talk to the colleague privately and ask them to stop",
+          "correct": false,
+          "points": 0,
+          "feedback": "While well-intentioned, this isn't enough. Formally report it so your company can protect sensitive information."
+        }
+      ]
+    },
+    {
+      "title": "Video Conference Zoom Bombing",
+      "message": "During a client video conference, a stranger joins the call and starts screaming inappropriate content, disrupting the meeting. This is a high-level client call.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Let them talk until they disconnect on their own",
+          "correct": false,
+          "points": 0,
+          "feedback": "Unacceptable! Remove the disruption immediately. Lock the meeting, eject the participant, and reschedule if needed."
+        },
+        {
+          "text": "Remove the participant, lock the meeting, and reschedule or switch to phone",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Quick action protects your client relationship. Always set meeting passwords and limit participant access."
+        },
+        {
+          "text": "Ask them to stop and wait for them to leave",
+          "correct": false,
+          "points": 0,
+          "feedback": "You need to take action immediately. Remove them and lock the meeting to prevent further disruption."
+        }
+      ]
+    },
+    {
+      "title": "Cloud Storage Oversharing",
+      "message": "Your team uses a shared cloud storage folder for client data. Someone accidentally shares it with 'anyone with the link' instead of specific team members. The link gets shared in a team chat.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Leave it as-is since it's just team chat",
+          "correct": false,
+          "points": 0,
+          "feedback": "Data breach! Client data is exposed. Change permissions immediately and notify your manager."
+        },
+        {
+          "text": "Change permissions to 'specific people only' and notify your manager immediately",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct action! Limit exposure and report the incident. Client data must be protected under data protection laws."
+        },
+        {
+          "text": "Delete the chat message so people forget about the link",
+          "correct": false,
+          "points": 0,
+          "feedback": "Deleting won't help if someone already accessed it. Change permissions and report the incident immediately."
+        }
+      ]
+    },
+    {
+      "title": "Fake Invoice Scam",
+      "message": "You receive an invoice from what appears to be your office supplies vendor. It looks legitimate and is for $5,000. An email says to 'process this payment urgently' but doesn't match their usual format.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Process the payment immediately to avoid late fees",
+          "correct": false,
+          "points": 0,
+          "feedback": "Likely fraud! Verify with the vendor directly. Compare to past invoices and confirm through official channels."
+        },
+        {
+          "text": "Call the vendor directly using their official phone number to verify the invoice",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Invoice fraud is common. Always verify large invoices through direct contact with known numbers."
+        },
+        {
+          "text": "Ask your manager if this invoice is legitimate",
+          "correct": false,
+          "points": 0,
+          "feedback": "Good to inform them, but verify directly with the vendor yourself. Your manager may not recognize the fraud either."
+        }
+      ]
+    },
+    {
+      "title": "Remote Access Malware",
+      "message": "Your computer starts running slowly and you notice unknown processes in the task manager. You remember installing a 'helpful tool' from a download site last week to optimize your system.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Uninstall the tool and restart your computer",
+          "correct": false,
+          "points": 0,
+          "feedback": "Not enough! Report to IT immediately. The tool may have installed malware that persists after uninstall."
+        },
+        {
+          "text": "Disconnect from the network immediately and report to IT security",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! This prevents malware spread. IT can clean your system and check if company data was accessed."
+        },
+        {
+          "text": "Run your antivirus software to clean the infection",
+          "correct": false,
+          "points": 0,
+          "feedback": "Antivirus might miss it. Disconnect first and let IT handle this professionally. Company data may be compromised."
+        }
+      ]
+    },
+    {
+      "title": "Mandatory Training Scam",
+      "message": "You receive an email saying 'Mandatory compliance training required' with a link to update your employee information. It claims to be from your HR department but the domain looks slightly off.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Click the link and update your information to stay compliant",
+          "correct": false,
+          "points": 0,
+          "feedback": "Phishing attempt! Go directly to your company's HR portal or intranet. Notice the suspicious domain."
+        },
+        {
+          "text": "Go to your company's official HR portal or contact HR directly",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct! Always use official channels. Phishing often impersonates compliance or security training."
+        },
+        {
+          "text": "Check if other colleagues received the same email",
+          "correct": false,
+          "points": 0,
+          "feedback": "While checking is good, go to official sources first. Mass phishing campaigns often target many employees."
+        }
+      ]
+    },
+    {
+      "title": "Data Protection Compliance",
+      "message": "Your role involves accessing customer personal data. You realize you sometimes discuss customer details with colleagues at lunch or leave documents on your desk overnight.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Continue as-is since colleagues need the information anyway",
+          "correct": false,
+          "points": 0,
+          "feedback": "Violation of data protection regulations! Only discuss what's necessary, lock documents away, and follow your company's data handling policies."
+        },
+        {
+          "text": "Only discuss necessary information, lock documents securely, and follow data protection policies",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Data protection is everyone's responsibility. These practices protect customers and your company legally."
+        },
+        {
+          "text": "Only avoid discussing data in front of clients",
+          "correct": false,
+          "points": 0,
+          "feedback": "Data protection applies everywhere. Follow your company's information security policies in all settings."
+        }
+      ]
+    },
+    {
+      "title": "Mobile Device Loss",
+      "message": "You left your work phone at a restaurant. It contains your work email, client data, and access to your company's systems. You're 30 minutes away and can't retrieve it immediately.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Go retrieve it later after checking if you left it at home",
+          "correct": false,
+          "points": 0,
+          "feedback": "Critical risk! Report it to IT immediately so they can remotely wipe it. Don't delay - someone may have already accessed it."
+        },
+        {
+          "text": "Call IT immediately to report it and request remote device wipe",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! IT can remotely disable access and wipe the device. Speed is critical in device loss situations."
+        },
+        {
+          "text": "Change all your passwords when you get home",
+          "correct": false,
+          "points": 0,
+          "feedback": "Good step but too slow! Call IT immediately for remote wipe. Assume the device is compromised."
+        }
+      ]
+    },
+    {
+      "title": "Suspicious Social Engineering Call",
+      "message": "Someone calls your office claiming to be from IT support. They say there's a critical security issue and need immediate remote access to your computer. You don't recognize their voice.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Grant remote access to fix the critical issue",
+          "correct": false,
+          "points": 0,
+          "feedback": "Social engineering attack! Never grant remote access to unknown callers. Hang up and call your IT department directly."
+        },
+        {
+          "text": "Tell them you'll call the IT department directly and hang up",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Real IT support won't mind you verifying their identity. This is a common social engineering tactic."
+        },
+        {
+          "text": "Ask them questions to verify they're really from IT",
+          "correct": false,
+          "points": 0,
+          "feedback": "Sophisticated callers can answer your questions. Don't engage. Hang up and call your company's IT directly."
+        }
+      ]
+    },
+    {
+      "title": "Third-Party Application Access",
+      "message": "A productivity app you use at work requests permission to access your Google account 'to sync documents.' You've used the app for a year. Granting access would be convenient.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Grant permission since you've trusted the app before",
+          "correct": false,
+          "points": 0,
+          "feedback": "Apps can be compromised over time. Review what access it needs. If it doesn't need account access, deny it."
+        },
+        {
+          "text": "Review what access is requested and grant only what's necessary",
+          "correct": true,
+          "points": 5,
+          "feedback": "Excellent! Even trusted apps should have minimal permissions. Only grant access to specific functions needed."
+        },
+        {
+          "text": "Use a separate personal account for untrusted apps",
+          "correct": false,
+          "points": 0,
+          "feedback": "This app isn't necessarily untrusted, but over-permissioning is the issue. Grant only what's truly necessary."
+        }
+      ]
+    },
+    {
+      "title": "Team Member Performance Issue",
+      "message": "You notice a colleague has been working excessive overtime and seems stressed. You discover they've been secretly accessing files outside their role. When confronted, they seem evasive about why.",
+      "difficulty": 2,
+      "options": [
+        {
+          "text": "Ignore it - it's their personal business",
+          "correct": false,
+          "points": 0,
+          "feedback": "Potential insider threat! Unauthorized file access could indicate data theft or sabotage. Report to your manager or security."
+        },
+        {
+          "text": "Report the unauthorized file access to your manager or security team",
+          "correct": true,
+          "points": 5,
+          "feedback": "Correct! Unusual behavior + unauthorized access = potential insider threat. Your company needs to investigate."
+        },
+        {
+          "text": "Directly confront them about what they're accessing",
+          "correct": false,
+          "points": 0,
+          "feedback": "Don't confront directly. Report to management or security. They're trained to handle these situations professionally."
+        }
+      ]
+    },
+    {
+      "title": "Printing Sensitive Documents",
+      "message": "You're about to print client financial documents in a shared office printer. You notice the printer's tray is full of uncollected documents. You can't see who they belong to.",
+      "difficulty": 1,
+      "options": [
+        {
+          "text": "Leave your documents in the queue and collect them later",
+          "correct": false,
+          "points": 0,
+          "feedback": "Risk! Your documents could be left exposed. Collect immediately when printing and check who left the other documents."
+        },
+        {
+          "text": "Collect your documents immediately after printing and report the uncollected documents to IT/security",
+          "correct": true,
+          "points": 5,
+          "feedback": "Perfect! Immediately collect sensitive documents and report privacy concerns. Uncollected documents are a data loss risk."
+        },
+        {
+          "text": "Leave the uncollected documents at the printer for the owner to find",
+          "correct": false,
+          "points": 0,
+          "feedback": "Uncollected sensitive documents pose a security risk. Report them to your manager or security team."
+        }
+      ]
+    }
+  ]
+}
