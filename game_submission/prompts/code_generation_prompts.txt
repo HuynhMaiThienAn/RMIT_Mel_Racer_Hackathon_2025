@@ -30,4 +30,4 @@ change the scoring system so that (moving forward is +1 for each tile, answer qu
 
 remove extra dice option and Random events may occur on rolls
 
-how do i add sound effec
+how do i add sound effect
